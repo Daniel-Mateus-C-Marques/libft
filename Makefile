@@ -1,1 +1,17 @@
-daniel é a pessoa mais linda desse mundo 
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/03/03 09:54:04 by danicamp          #+#    #+#              #
+#    Updated: 2026/03/03 22:37:25 by danicamp         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+FLAG = -Wall -Wextra -Werror
+
+NAME = libft.a
+
+SRC = 
