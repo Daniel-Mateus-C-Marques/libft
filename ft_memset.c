@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/03 15:59:08 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/05 08:52:30 by danicamp         ###   ########.fr       */
+/*   Created: 2026/03/04 15:05:18 by danicamp          #+#    #+#             */
+/*   Updated: 2026/03/05 08:19:15 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-
 #include <stdlib.h>
-#include "ft_isalpha.c"
-#include "ft_isdigit.c"
-#include "ft_isalnum.c"
-#include "ft_isascii.c"
-#include "ft_isprint.c"
-#include "ft_strlen.c"
-#include "ft_memset.c"
-#include "ft_bzero.c"
+#include "libft.h"
 
-int		ft_isalpha(int c);
+void    *ft_memset(void *s, int c, size_t n)
+{
+    unsigned char   *ptr;
+    size_t i;
 
-#endif
+    i = 0;
+    ptr = (unsigned char *)s;
+    while (i < n)
+    {
+        ptr[i] = (unsigned char)c;
+        i++;
+    }
+    return (s);
+}
