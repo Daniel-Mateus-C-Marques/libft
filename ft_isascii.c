@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 22:17:53 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/03 22:24:05 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/03/08 13:58:44 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int	ft_isascii(int c)
 {
 	if (c > 127 || c < 0)
 		return (0);
-	else 
+	else
 		return (1);
 }

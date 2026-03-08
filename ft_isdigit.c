@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 22:04:32 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/03 22:08:40 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/03/08 13:59:13 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int	ft_isdigit(int c)
 	if (c >= '0' && c <= '9')
 		return (1);
 	else
-		return(0);
+		return (0);
 }

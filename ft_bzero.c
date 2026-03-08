@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 08:47:00 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/05 08:55:30 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/03/08 13:58:23 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s , 0, n);
+	ft_memset(s, 0, n);
 }

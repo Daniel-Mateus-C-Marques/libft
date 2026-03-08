@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:58:54 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/05 08:55:33 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/03/08 21:55:02 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,69 @@ int main()
     printf("%s\n", test);
     */
 
+    /*
     //test ft_bzero
     char test[7] = "Daniel";
+    char test2[7] = "Mateus";
 
     printf("%s\n", test);
+    printf("%s\n", test2);
     ft_bzero(test, 6);
+    bzero(test2, 6);
     printf("%s\n", test);
-   
+    printf("%s\n", test2);
+    */
+
+    /*
+    //test ft_memcpy
+    char test[7] = "Daniel";
+    char test2[7] = "Mateus";
+    char test3[7] = "Daniel";
+    char test4[7] = "Mateus";
+
+    printf("%s\n%s\n", test, test2);
+    printf("%s\n%s\n", test3, test4);
+    ft_memcpy(test, test2, 6);
+    memcpy(test3, test4, 6);
+    printf("%s\n%s\n", test, test2);
+    printf("%s\n%s\n", test3, test4);
+    */
+
+    /*
+    //test ft_memmove
+    char test[20] = "daniel";
+    char test2[20] = "DANIEL";
+    //Using ft_memmove
+    printf("%s\n", test);
+    ft_memmove(test + 2, test, 5);
+    printf("%s\n", test);
+    //Using ft_memcpy
+    printf("%s\n", test2);
+    ft_memcpy(test2 + 2, test2, 5);
+    printf("%s\n", test2);
+    */
+
+    /*
+    //test ft_strlcpy
+    char src[14] = "Daniel mateus";
+    char dest[7] = "Mateus";
+
+
+    printf("%ld\n", ft_strlcpy(dest, src, 7));
+    printf("%s\n", dest);
+    */
+
+    /*
+    //test ft_toupper
+    char letter = '-';
+
+    printf("%c\n", ft_toupper(letter));
+    */
+
+    /*
+    //test ft_tolower
+    char letter = 'a';
+
+    printf("%c\n", ft_tolower(letter));
+    */
 }

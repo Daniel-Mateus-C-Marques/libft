@@ -6,18 +6,18 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 22:35:11 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/03 22:42:15 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/03/08 21:25:45 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
-	while(s[len] != '\0')
+	while (s[len] != '\0')
 		len++;
 	return (len);
 }

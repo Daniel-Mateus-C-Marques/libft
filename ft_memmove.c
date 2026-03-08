@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/03 22:25:40 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/08 13:59:52 by danicamp         ###   ########.fr       */
+/*   Created: 2026/03/08 13:07:40 by danicamp          #+#    #+#             */
+/*   Updated: 2026/03/08 20:35:41 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	else
-		return (0);
+	int		i;
+	char	*ptr_dest;
+	char	*ptr_src;
+
+	i = (int)n;
+	ptr_dest = (char *) dest;
+	ptr_src = (char *) src;
+	if (dest < src)
+		ft_memcpy(dest, src, n);
+	else if (dest > src)
+	{
+		while (i >= 0)
+		{
+			ptr_dest[i] = ptr_src[i];
+			i--;
+		}
+	}
+	return (dest);
 }
