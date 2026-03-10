@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:58:54 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/08 21:55:02 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/03/10 20:21:58 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,56 @@ int main()
     char letter = 'a';
 
     printf("%c\n", ft_tolower(letter));
+    */
+
+    /*
+    //test ft_strchr
+    char str[10] = "Daniel";
+
+    write(1, ft_strchr(str, 'z'), 1);
+    write(1, "\n", 1);
+    */
+
+    /*
+    //test ft_strrchr
+    char str[10] = "daniel";
+    if (ft_strrchr(str, 'i'))
+        printf("%s\n", ft_strrchr(str, 'i'));
+    else if (!(ft_strrchr(str, 'i')))
+        printf("NULL\n");
+    */
+
+    /*
+    //test ft_strncmp
+    char s1[10] = "Danael";
+    char s2[10] = "Daniel";
+
+    printf("%d\n", ft_strncmp(s1, s2, 3));
+    */
+
+    /*
+    //test ft_memchr
+    char str[10] = "daniel";
+    if (ft_memchr(str, 'e', 7))
+        printf("%s\n", (char *)ft_memchr(str, 'e', 7));
+    else
+        printf("NULL\n");
+    */
+
+    /*
+    //test ft_memcmp
+    char s1[10] = "daniel";
+    char s2[10] = "daniel";
+    printf("%d\n", ft_memcmp(s1, s2, 3));
+    */
+
+    /*
+    //test ft_strnstr
+    char big[50] = "Daniel Mateus Campos Marques";
+    char little [20] = "niel";
+    if (ft_strnstr(big, little, 15))
+        printf("%s\n", ft_strnstr(big, little, 15));
+    else
+        printf("NULL\n");
     */
 }

@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/06 08:22:43 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/09 12:27:59 by danicamp         ###   ########.fr       */
+/*   Created: 2026/03/09 11:29:04 by danicamp          #+#    #+#             */
+/*   Updated: 2026/03/09 11:59:58 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strrchr(char *str, int c)
 {
-	size_t			i;
-	unsigned char	*ptr_dest;
-	unsigned char	*ptr_src;
+	int		i;
+	char	*letter;
 
 	i = 0;
-	ptr_dest = (unsigned char *)dest;
-	ptr_src = (unsigned char *)src;
-	while (i < n)
+	letter = NULL;
+	while (str[i] != '\0')
 	{
-		ptr_dest[i] = ptr_src[i];
+		if (str[i] == c)
+			letter = str + i;
 		i++;
 	}
-	return (dest);
+	if (str[i] == c)
+		return (str + i);
+	else if (letter != NULL)
+		return (letter);
+	return (NULL);
 }

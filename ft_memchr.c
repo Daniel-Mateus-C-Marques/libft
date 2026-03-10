@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/06 08:22:43 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/09 12:27:59 by danicamp         ###   ########.fr       */
+/*   Created: 2026/03/09 12:21:49 by danicamp          #+#    #+#             */
+/*   Updated: 2026/03/10 12:50:03 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
+	unsigned char	*ptr_str;
 	size_t			i;
-	unsigned char	*ptr_dest;
-	unsigned char	*ptr_src;
 
 	i = 0;
-	ptr_dest = (unsigned char *)dest;
-	ptr_src = (unsigned char *)src;
-	while (i < n)
+	ptr_str = (unsigned char *)str;
+	while (i < n && ptr_str[i] != '\0')
 	{
-		ptr_dest[i] = ptr_src[i];
+		if (ptr_str[i] == c)
+			return (ptr_str + i);
 		i++;
 	}
-	return (dest);
+	if (ptr_str[i] == c)
+		return (ptr_str + i);
+	return (NULL);
 }

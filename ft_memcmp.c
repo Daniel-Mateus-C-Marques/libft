@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/06 08:22:43 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/09 12:27:59 by danicamp         ###   ########.fr       */
+/*   Created: 2026/03/10 12:39:11 by danicamp          #+#    #+#             */
+/*   Updated: 2026/03/10 12:54:00 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
+	unsigned char	*ptr_s1;
+	unsigned char	*ptr_s2;
 	size_t			i;
-	unsigned char	*ptr_dest;
-	unsigned char	*ptr_src;
 
 	i = 0;
-	ptr_dest = (unsigned char *)dest;
-	ptr_src = (unsigned char *)src;
-	while (i < n)
+	ptr_s1 = (unsigned char *)s1;
+	ptr_s2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while (i < n && ptr_s1[i] != '\0' && ptr_s1[i] == ptr_s2[i])
 	{
-		ptr_dest[i] = ptr_src[i];
+		if (i == n - 1)
+			break ;
 		i++;
 	}
-	return (dest);
+	return (ptr_s1[i] - ptr_s2[i]);
 }
