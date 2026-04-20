@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:58:54 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/16 21:01:00 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/20 19:25:46 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,11 +256,13 @@ int main()
 	int		i;
 
 	i = 0;
-	split = ft_split("", ' ');
+	split = ft_split(",daniel,mat..s,,,,campos,marques,", ',');
 	while (split[i])
 	{
 		printf("%s ", split[i]);
 		write(1, "\n", 1);
+		free(split[i]);
 		i++;
 	}
+	free(split[i])
 }
