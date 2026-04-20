@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:58:54 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/13 22:35:06 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/03/16 21:01:00 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -236,6 +236,7 @@ int main()
 	free(sub);
 	*/
 
+	/*
 	//test ft_strjoin
 	char s1[50] = "daniel ";
 	char s2[50] = "Mateus";
@@ -243,4 +244,23 @@ int main()
 	printf("%s\n", ft_strjoin(s1, s2));
 	printf("%s\n", s1);
 	printf("%s\n", s2);
+	*/
+
+	/*
+	//test ft_strtrim
+	printf("%s\n", ft_strtrim("___+++_+_+_+_+_+daniel_+_+_+_++_+_", "_+"));
+	*/
+
+	//test ft_split
+	char	**split;
+	int		i;
+
+	i = 0;
+	split = ft_split("", ' ');
+	while (split[i])
+	{
+		printf("%s ", split[i]);
+		write(1, "\n", 1);
+		i++;
+	}
 }

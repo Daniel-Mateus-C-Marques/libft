@@ -6,13 +6,13 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 22:17:08 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/13 22:38:04 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/03/14 23:03:31 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, const char *src)
+static char	*ft_strcat(char *dest, const char *src)
 {
 	int	i;
 	int	j;
