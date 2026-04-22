@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:59:08 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/16 20:29:51 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/22 22:24:40 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@
 #include "ft_strjoin.c"
 #include "ft_strtrim.c"
 #include "ft_split.c"
+#include "ft_itoa.c"
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -66,5 +67,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:58:54 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/22 21:57:46 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/22 22:43:46 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,6 +251,7 @@ int main()
 	printf("%s\n", ft_strtrim("___+++_+_+_+_+_+daniel_+_+_+_++_+_", "_+"));
 	*/
 
+	/*
 	//test ft_split
 	char	**split;
 	int		i;
@@ -265,5 +266,10 @@ int main()
 	}
 	printf("\n");
 	free(split);
+	*/
+
+	//test ft_itoa
+	int	n = -123456789;
+	printf("%s\n", ft_itoa(n));
 }
 
