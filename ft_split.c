@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 18:39:39 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/22 20:59:03 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/22 22:00:38 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,16 @@ static char	*extract_word(const char *s, int start, int len)
 	return (word);
 }
 
+static void	free_word(char **words, int j)
+{
+	while (j >= 0)
+	{
+		free(words[j]);
+		j--;
+	}
+	free(words);
+}
+
 static char	**put_word(const char *s, char sep, char **words)
 {
 	int	i;
@@ -54,7 +64,6 @@ static char	**put_word(const char *s, char sep, char **words)
 
 	i = 0;
 	j = 0;
-	start = 0;
 	while (s[i])
 	{
 		if (s[i] != sep)
@@ -64,18 +73,13 @@ static char	**put_word(const char *s, char sep, char **words)
 				i++;
 			words[j] = extract_word(s, start, i - start);
 			if (!words[j])
-			{
-				while (j > 0)
-					free(words[--j]);
-				free(words);
-				return (NULL);
-			}
+				return (free_word(words, j - 1), NULL);
 			j++;
 		}
 		else
 			i++;
 	}
-	words[count_words(s, sep)] = NULL;
+	words[j] = NULL;
 	return (words);
 }
 
