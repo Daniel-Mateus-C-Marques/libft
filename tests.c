@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:58:54 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/22 22:43:46 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/23 20:26:31 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,18 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
+
+char	upper_odd(unsigned int i, char c)
+	{
+		if ((i % 2 != 0) && c >= 'a' && c <= 'z')
+			c -= 32;
+		return (c);
+	}
+void	upper_odd2(unsigned int i, char *c)
+	{
+		if ((i % 2 != 0) && *c >= 'a' && *c <= 'z')
+			*c -= 32;
+	}
 
 int main()
 {
@@ -268,8 +280,45 @@ int main()
 	free(split);
 	*/
 
+	/*
 	//test ft_itoa
 	int	n = -123456789;
 	printf("%s\n", ft_itoa(n));
+	*/
+
+	/*
+	//test ft_strmapi
+	char *new = ft_strmapi("daniel", upper_odd);
+	printf("%s\n", new);
+	free(new);
+	*/
+
+	/*
+	//test ft_striteri
+	char	nome[] = "daniel";	
+	ft_striteri(nome, upper_odd2);
+	printf("%s\n", nome);
+	*/
+
+	/*
+	//test ft_putchar_fd
+	ft_putchar_fd('d', 3);
+	*/
+
+	/*
+	//test ft_putstr_fd
+	char nome[] = "daniel";
+	ft_putstr_fd(nome, 3);
+	*/
+
+	/*
+	//test ft_putendl_fd
+	char nome[] = "daniel";
+	ft_putendl_fd(nome, 1);
+	*/
+
+	//test ft_putnbr_fd
+	ft_putnbr_fd(-100, 1);
+
 }
 

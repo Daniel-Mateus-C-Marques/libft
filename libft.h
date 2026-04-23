@@ -6,14 +6,15 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:59:08 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/22 22:24:40 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/23 16:59:09 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
 
-#include <stdlib.h>	
+#include <stdlib.h>
+#include <unistd.h>	
 #include "ft_isalpha.c"
 #include "ft_isdigit.c"
 #include "ft_isalnum.c"
@@ -41,6 +42,12 @@
 #include "ft_strtrim.c"
 #include "ft_split.c"
 #include "ft_itoa.c"
+#include "ft_strmapi.c"
+#include "ft_striteri.c"
+#include "ft_putchar_fd.c"
+#include "ft_putstr_fd.c"
+#include "ft_putendl_fd.c"
+#include "ft_putnbr_fd.c"
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -68,5 +75,11 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
