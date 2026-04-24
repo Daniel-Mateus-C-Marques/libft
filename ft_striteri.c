@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 08:09:44 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/23 08:25:03 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/24 20:48:33 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
-	
+
 	if (!s || !f)
-		return;
+		return ;
 	i = 0;
 	while (s[i])
 	{

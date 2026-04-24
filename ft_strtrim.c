@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 22:46:08 by danicamp          #+#    #+#             */
-/*   Updated: 2026/03/16 18:26:23 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/24 20:47:31 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strtrim(const char *s1, char const *set)
 	start = 0;
 	end = ft_strlen(s1);
 	i = 0;
-	if(!s1 || !set)
+	if (!s1 || !set)
 		return (NULL);
 	while (s1[start] && is_in_set(s1[start], set))
 		start++;

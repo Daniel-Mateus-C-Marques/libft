@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 22:05:33 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/22 23:02:24 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/24 20:46:14 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	number_len(long int nb)
 {
-	int	len;
+	int			len;
 	long int	number;
 
 	len = 0;
@@ -53,10 +53,10 @@ static char	*put_string(char *number, int len, long int nb)
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	char	*number;
+	int			len;
+	char		*number;
 	long int	nb;
-	
+
 	nb = n;
 	len = number_len(nb);
 	number = malloc(len + 1);
