@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:58:54 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/23 20:26:31 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/24 08:07:38 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -317,8 +317,18 @@ int main()
 	ft_putendl_fd(nome, 1);
 	*/
 
+	/*
 	//test ft_putnbr_fd
 	ft_putnbr_fd(-100, 1);
+	*/
+
+	//test ft_lstnre
+	t_list	*first;
+
+	first = ft_lstnew("Daniel");
+	printf("%s\n", (char *)first->content);
+	if (!first->next)
+		printf("NULL\n");
 
 }
 

@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:59:08 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/23 16:59:09 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/24 08:06:09 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 
 #include <stdlib.h>
 #include <unistd.h>	
+
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+}t_list;
+
 #include "ft_isalpha.c"
 #include "ft_isdigit.c"
 #include "ft_isalnum.c"
@@ -48,6 +55,7 @@
 #include "ft_putstr_fd.c"
 #include "ft_putendl_fd.c"
 #include "ft_putnbr_fd.c"
+#include "ft_lstnew.c"
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -79,7 +87,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
-void ft_putendl_fd(char *s, int fd);
+void 	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void *content);
 
 #endif
