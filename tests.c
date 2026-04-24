@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:58:54 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/24 08:07:38 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/24 20:42:10 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -323,12 +323,26 @@ int main()
 	*/
 
 	//test ft_lstnre
+	t_list	*begin;
 	t_list	*first;
+	t_list	*second;
 
+	begin = NULL;
+	//Test ft_lstnew 
 	first = ft_lstnew("Daniel");
+	second = ft_lstnew("Mateus");
 	printf("%s\n", (char *)first->content);
-	if (!first->next)
-		printf("NULL\n");
-
+	printf("%s\n", (char *)second->content);
+	//Test ft_lstadd_front
+	ft_lstadd_front(&begin, first);
+	ft_lstadd_front(&begin, second);
+	printf("1- %s\n", (char*)begin->content);
+	printf("2- %s\n", (char*)begin->next->content);
+	//test ft_size
+	printf("Size: %d\n", ft_lstsize(begin));
+	printf("Last: %s\n", (char *)ft_lstlast(begin)->content);
+	//test ft_lstadd_back
+	ft_lstadd_back(&begin, ft_lstnew("Campos"));
+	printf("3- %s\n", (char*)ft_lstlast(begin)->content);
 }
 
