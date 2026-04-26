@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:59:08 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/26 16:42:47 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/26 18:05:47 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,25 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+/**Checks if the character is alphabetic.*/
 int		ft_isalpha(int c);
+/**Checks if the character is a numeric digit.*/
 int		ft_isdigit(int c);
+/**Checks if the character is a numeric digit or alphabetic.*/
 int		ft_isalnum(int c);
+/**Checks if the character is on ASCII table.*/
 int		ft_isascii(int c);
+/**Checks if the character is printable.*/
 int		ft_isprint(int c);
+/**Returns the length of a string.*/
 size_t	ft_strlen(const char *s);
+/**Sets a block memory with a given value.*/
 void	*ft_memset(void *s, int c, size_t n);
+/**Sets a block of memory with to zero*/
 void	ft_bzero(void *s, size_t n);
+/**Copies a block of memory from source to destination*/
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+/**Moves a block of memory*/
 void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size);
 size_t	ft_strlcat(char *dst, char *src, size_t size);
