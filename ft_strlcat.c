@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/25 08:04:17 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/26 13:17:57 by danicamp         ###   ########.fr       */
+/*   Created: 2026/04/26 15:45:38 by danicamp          #+#    #+#             */
+/*   Updated: 2026/04/26 16:41:12 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+size_t	ft_strlcat(char *dst, char *src, size_t size)
 {
-	t_list	*temp;
+	size_t	i;
+	size_t	len_src;
+	size_t	len_dest;
 
-	if (!lst || !del)
-		return ;
-	while (*lst)
+	len_src = ft_strlen(src);
+	len_dest = ft_strlen(dst);
+	if (len_dest >= size || size == 0)
+		return (len_src + size);
+	i = 0;
+	while (src[i] && (len_dest + i + 1) < size)
 	{
-		temp = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = temp;
+		dst[len_dest + i] = src[i];
+		i++;
 	}
+	dst[len_dest + i] = '\0';
+	return (len_dest + len_src);
 }

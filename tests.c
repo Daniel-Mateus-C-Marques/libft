@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:58:54 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/25 10:01:28 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/26 13:54:15 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,36 @@ void	upper_odd2(unsigned int i, char *c)
 		if ((i % 2 != 0) && *c >= 'a' && *c <= 'z')
 			*c -= 32;
 	}
+void	*upper_content(void *content)
+{
+	int	i;
+	char *text;
+
+	i = 0;
+	text = (char *)content;
+	while (text[i])
+	{
+		text[i] = ft_toupper(text[i]);
+		i++;
+	}
+	return (text);
+}
 void	free_content(void *content)
 {
 	free(content);
+}
+void	print_node_content(t_list *lst)
+{
+	int	i;
+
+	i = 0;
+	printf("List content\n");
+	while(lst)
+	{
+		printf("%d - %s\n", i, (char *)lst->content);
+		lst = lst->next;
+		i++;
+	}
 }
 
 int main()
@@ -177,7 +204,9 @@ int main()
 	*/
 
 	/*
-	//test ft_strncmp
+	//test ft_strncmp0 - Mateus
+1 - Daniel
+2 - C
 	char s1[10] = "Danael";
 	char s2[10] = "Daniel";
 
@@ -355,7 +384,9 @@ int main()
 	if (!begin)
 		printf("Lista Vazia\n");
 	*/
+	print_node_content(begin);
 	//test ft_lstiter and ft_lstmap
-	
+	print_node_content(ft_lstmap(begin, upper_content, free_content));
+
 }
 
