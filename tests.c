@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:58:54 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/24 20:42:50 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/25 10:01:28 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ void	upper_odd2(unsigned int i, char *c)
 		if ((i % 2 != 0) && *c >= 'a' && *c <= 'z')
 			*c -= 32;
 	}
+void	free_content(void *content)
+{
+	free(content);
+}
 
 int main()
 {
@@ -329,8 +333,8 @@ int main()
 
 	begin = NULL;
 	//Test ft_lstnew 
-	first = ft_lstnew("Daniel");
-	second = ft_lstnew("Mateus");
+	first = ft_lstnew(ft_strdup("Daniel"));
+	second = ft_lstnew(ft_strdup("Mateus"));
 	printf("%s\n", (char *)first->content);
 	printf("%s\n", (char *)second->content);
 	//Test ft_lstadd_front
@@ -342,7 +346,16 @@ int main()
 	printf("Size: %d\n", ft_lstsize(begin));
 	printf("Last: %s\n", (char *)ft_lstlast(begin)->content);
 	//test ft_lstadd_back
-	ft_lstadd_back(&begin, ft_lstnew("Campos"));
+	ft_lstadd_back(&begin, ft_lstnew(ft_strdup("Campos")));
 	printf("3- %s\n", (char*)ft_lstlast(begin)->content);
+	/*
+	//test ft_lstdelone and ft_lstclear
+	printf("Aoagando lista ...\n");
+	ft_lstclear(&begin, free_content);
+	if (!begin)
+		printf("Lista Vazia\n");
+	*/
+	//test ft_lstiter and ft_lstmap
+	
 }
 
