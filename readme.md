@@ -69,7 +69,10 @@ Are included in the library:
 
 ---
 
-## Compilation
+## Intructions
+
+---
+### Compilation
 
 Library compilation:
 
