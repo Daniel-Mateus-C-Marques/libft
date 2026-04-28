@@ -80,18 +80,21 @@ Library compilation:
 make
 ```
 
-Limpar arquivos objeto:
+Clean object files:
 
 ```bash
 make clean
 ```
-Limpar arqivos objeto e libft.a:
+Clean object files and libft.a:
 
 ```bash
 make fclean
 ```
-Recompilar tudo:
+Recompile all:
 
 ```bash
 make re
 ```
+---
+## Resources
+

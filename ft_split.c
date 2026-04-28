@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 18:39:39 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/22 22:00:38 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/28 15:02:05 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,12 @@ static char	**put_word(const char *s, char sep, char **words)
 char	**ft_split(char const *s, char c)
 {
 	char	**words;
+	int		word_count;
 
+	word_count = count_words(s, c);
 	if (!s)
 		return (NULL);
-	words = malloc((count_words(s, c) + 1) * sizeof(char *));
+	words = malloc((word_count + 1) * sizeof(char *));
 	if (!words)
 		return (NULL);
 	words = put_word(s, c, words);
