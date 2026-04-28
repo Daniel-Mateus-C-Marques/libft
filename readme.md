@@ -1,16 +1,16 @@
 # Libft
 
-## 📖 Descrição
-A **libft** é uma biblioteca em C que recria várias funções da biblioteca padrão do C (`libc`) e implementa funções utilitárias adicionais.  
-O objetivo principal é aprender como essas funções funcionam internamente e reforçar conceitos fundamentais como manipulação de strings, memória e listas ligadas.
+## 📖 Description
+The **libft** is a C library that recreates several functions from the standard C library (libc) and implements additional utility functions.
+The main goal is to understand how these functions work internally and to reinforce fundamental concepts such as string manipulation, memory management, and linked lists.
 
 ---
 
-## ⚙️ Funcionalidades
+## ⚙️ Features
 
-A biblioteca inclui funções para:
+Are included in the library:
 
-### Caracteres
+### Characters
 - ft_isalpha
 - ft_isdigit
 - ft_isalnum
@@ -29,7 +29,7 @@ A biblioteca inclui funções para:
 - ft_strnstr
 - ft_strdup
 
-### Memória
+### Memory
 - ft_memset
 - ft_bzero
 - ft_memcpy
@@ -38,7 +38,7 @@ A biblioteca inclui funções para:
 - ft_memcmp
 - ft_calloc
 
-### Conversões
+### Conversions
 - ft_atoi
 
 ### Output
@@ -47,7 +47,7 @@ A biblioteca inclui funções para:
 - ft_putendl_fd
 - ft_putnbr_fd
 
-### Funções adicionais
+### Additional functions
 - ft_substr
 - ft_strjoin
 - ft_strtrim
@@ -56,7 +56,7 @@ A biblioteca inclui funções para:
 - ft_strmapi
 - ft_striteri
 
-### Listas ligadas
+### Linked list
 - ft_lstnew
 - ft_lstadd_front
 - ft_lstsize
@@ -69,9 +69,9 @@ A biblioteca inclui funções para:
 
 ---
 
-## 🛠️ Compilação
+## 🛠️ Compilation
 
-Compilar a biblioteca:
+Library compilation:
 
 ```bash
 make
