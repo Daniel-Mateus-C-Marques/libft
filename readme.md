@@ -69,9 +69,9 @@ Are included in the library:
 
 ---
 
-## Intructions
+## Instructions
 
----
+
 ### Compilation
 
 Library compilation:
