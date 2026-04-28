@@ -6,13 +6,13 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 15:45:38 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/26 16:41:12 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/04/28 11:26:11 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	len_src;
