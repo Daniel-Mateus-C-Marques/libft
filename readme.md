@@ -1,12 +1,12 @@
 # Libft
 
-## 📖 Description
+## Description
 The **libft** is a C library that recreates several functions from the standard C library (libc) and implements additional utility functions.
 The main goal is to understand how these functions work internally and to reinforce fundamental concepts such as string manipulation, memory management, and linked lists.
 
 ---
 
-## ⚙️ Features
+## Features
 
 Are included in the library:
 
@@ -69,7 +69,7 @@ Are included in the library:
 
 ---
 
-## 🛠️ Compilation
+## Compilation
 
 Library compilation:
 
