@@ -98,3 +98,5 @@ make re
 ---
 ## Resources
 
+- AI tools – Used for guidance, explanations, and code review.
+- W3Schools – Helpful for understanding basic C concepts and functions.
