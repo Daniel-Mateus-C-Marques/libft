@@ -75,15 +75,20 @@ Compilar a biblioteca:
 
 ```bash
 make
+```
 
 Limpar arquivos objeto:
 
+```bash
 make clean
-
+```
 Limpar arqivos objeto e libft.a:
 
+```bash
 make fclean
-
+```
 Recompilar tudo:
 
+```bash
 make re
+```
