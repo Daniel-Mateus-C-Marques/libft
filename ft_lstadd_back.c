@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 15:42:14 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/24 20:36:24 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/05/01 09:12:20 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		temp = temp->next;
 	}
 	temp->next = new;
+	temp->next->next = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: danicamp <danicamp@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:59:08 by danicamp          #+#    #+#             */
-/*   Updated: 2026/04/28 12:52:07 by danicamp         ###   ########.fr       */
+/*   Updated: 2026/05/01 09:12:13 by danicamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,9 +82,9 @@ char	*ft_strjoin(const char *s1, const char *s2);
 /**Returns a pointer to a new string from s1 removing 
  * a set of characters from start and end. */
 char	*ft_strtrim(const char *s1, const char *set);
-/**Returns a pointer to a array of strings that was spilled from a string s.*/
+/**Returns an array of strings split from s using the delimiter c.*/
 char	**ft_split(char const *s, char c);
-/**Transforms a given integer n in a string and returns it's pointer.*/
+/**Transforms a given integer n in a string and returns its pointer.*/
 char	*ft_itoa(int n);
 /**Returns a pointer to a new string from s applying 
  * a function f on each character in the new string.*/
@@ -101,7 +101,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 /**Creates a new t_list node.*/
 t_list	*ft_lstnew(void *content);
-/**Add as the first node a given node.*/
+/**Adds a node at the beginning of the list.*/
 void	ft_lstadd_front(t_list **lst, t_list *new);
 /**Returns the list size.*/
 int		ft_lstsize(t_list *lst);
